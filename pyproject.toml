@@ -1,0 +1,40 @@
+[tool.ruff]
+line-length = 120
+fix = true
+select = ["D", "E", "F", "I", "N"]
+ignore = ["D104", "D105", "N803", "N806"]
+fixable = ["E", "F", "I"]
+unfixable = []
+
+[tool.ruff.pydocstyle]
+convention = "google"
+
+[tool.black]
+line-length = 120
+
+[tool.poetry]
+name = "basket-project"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{ include = "basket_project" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+numpy = "^1.24.3"
+pandas = "^2.0.2"
+matplotlib = "^3.7.1"
+scikit-learn = "^1.2.2"
+ipykernel = "^6.23.2"
+imbalanced-learn = "^0.10.1"
+loguru = "^0.7.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+ruff = "^0.0.272"
+pre-commit = "^3.3.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
